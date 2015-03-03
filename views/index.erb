@@ -1,0 +1,18 @@
+<h1>URL Shortener</h1>
+
+<ul>
+  <% urls.each do |url| %>
+      <li>
+        <%= url["long"] %>
+        <a href=<%= url["short"] %>><%= url["short"] %></a>
+        <%= url["count"] %>
+      </li>
+  <% end %>
+</ul>
+
+<h1>Enter the URL in here</h1>
+
+<form id="add_url" action="/" method="post">
+  <input type="text" id="url" name="url"></input>
+  <input type="submit" id="new_url"></input>
+</form>
